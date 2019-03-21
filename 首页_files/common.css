@@ -1,0 +1,209 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(244,243,248);
+    font-family:Helvetica;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/*顶部*/
+header{
+    background-color: rgb(251,79,69);
+    height: 2.5rem;
+    color: white;
+}
+.div_flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.header_span{
+    font-family: sans-serif;
+    font-size: 17px;
+}
+/*全页面字体样式*/
+span{
+    font-size: 17px;
+    /*font-family: Arial;*/
+    font-family:Helvetica;
+}
+@media screen and ( max-width: 360px ) {
+    span{
+        font-size: 16px;
+    }
+}
+@media screen and ( max-width: 320px ) {
+    span{
+        font-size: 13px;
+    }
+}
+/*弹性样式上下居中*/
+.flex-vertical{
+    display: flex;
+    align-items: center;
+}
+/*弹性样式,向两边居中*/
+.flex-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*弹性样式,上下左右向中间居中*/
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*弹性样式，颠倒*/
+.flex-direction{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*弹性样式，颠倒,往上下两个方向扩展*/
+.flex-direction-updown{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+/*弹性样式左右居中*/
+.justify-content{
+    display: flex;
+    justify-content: center;
+}
+/*彩种字体颜色*/
+.tile-str{
+    font-size: 16px;
+    font-weight: bold;
+}
+/*彩色灰色小字体*/
+.font-small{
+    font-size: 12px;
+    color: rgb(149,149,149);
+}
+/*灰色字体*/
+.font-gray{
+    color: gray;
+}
+.darkgray{
+    color: darkgray
+}
+/*按钮红色字体*/
+.font-red{
+    color: rgb(251,79,69);
+}
+/*蓝色字体*/
+.font-blue{
+    color: rgb(47,175,255);
+}
+/*绿色字体*/
+.font-green{
+    color: rgb(69,179,6);
+}
+/*按钮黑色字体*/
+.font-black{
+    color: black;
+}
+/*有方向箭头*/
+.next{
+    height: 30px;
+    width: 20px;
+    background-repeat:no-repeat;
+    background-image: url("/statics/images/next.png");
+}
+/*右边空出距离*/
+.header-right-distance{
+    margin-right: 10px;
+}
+
+/*底部按钮，如登陆等按钮*/
+.footer-btn{
+    background-color: rgb(251,79,69);
+    border-radius: 4px;
+    border: none;
+    width: 92%;
+    height: 2.4rem;
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/*左右距离*/
+.left-distance{
+    margin-left: 18px;
+}
+.left-distance-small{
+    margin-left: 6px;
+}
+.right-distance-small{
+    margin-right: 6px;
+}
+
+.right-distance{
+    margin-right: 12px;
+}
+.top-distance{
+    margin-top: 18px;
+}
+.top-distance-small{
+    margin-top: 6px;
+}
+.bottom-distance{
+    margin-bottom: 18px;
+}
+.bottom-distance-small{
+    margin-bottom: 6px;
+}
+/*数字颜色*/
+.num-green{
+    color: rgb(69,179,6);
+}
+.num-red{
+    color: rgb(251,79,69);
+}
+
+
+/*input字体默认大小*/
+input{
+    font-size: 16px;
+    /*input框在ios中的阴影问题*/
+    /*-webkit-appearance: none;*/
+    /*点击时去掉阴影*/
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+input:focus{
+    outline: none;
+}
+input[type=text],input[type=password],input[type=number]{
+    -webkit-appearance: none;
+}
+/*select字体大小*/
+select{
+    font-size: 16px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+/*按钮字体大小*/
+button{
+    font-size: 16px;
+}
+button:focus{
+    outline: none;
+}
+
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+    .fix-iphonex {
+        padding-bottom: 34rem;
+    }
+}
+@media only screen and (width: 812px) and (height: 375px) and (-webkit-device-pixel-ratio: 3){
+    .fix-iphonex {
+        padding-bottom: 34rem;
+    }
+}
+
+.btn-sure1{
+    cursor:pointer;
+}

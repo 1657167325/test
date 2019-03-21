@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<!-- saved from url=(0019)http://test.h5.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+
+    <script src="./首页_files/jquery.min.js.下载"></script>
+    <script src="./首页_files/common.js.下载"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./首页_files/swiper.min.css">
+    <link rel="stylesheet" href="./首页_files/common.css">
+    <!--tab样式-->
+    <link rel="stylesheet" href="./首页_files/nav.css">
+    <script src="./首页_files/layer.js.下载"></script><link rel="stylesheet" href="./首页_files/layer.css" id="layuicss-layer">
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275002585' style='display:none' %3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1275002585%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></head><body><span id="cnzz_stat_icon_1275002585" style="display:none"><a href="https://www.cnzz.com/stat/website.php?web_id=1275002585" target="_blank" title="站长统计"><img border="0" hspace="0" vspace="0" src="./首页_files/pic1.gif"></a></span><script src="./首页_files/z_stat.php" type="text/javascript"></script><script src="./首页_files/core.php" charset="utf-8" type="text/javascript"></script>
+    <style>
+        /*私有部分*/
+        .mid_flex{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .mid_flex img{
+            width: 35px;
+            height: 35px;
+        }
+        .ext-mid-box{
+            background-color: white;
+            height: 72px;
+        }
+        .mid-small-box{
+            justify-content: center;
+            flex-direction: column;
+        }
+        .mid-span{
+            padding-top: 2px;
+        }
+        .box-title{
+            height: 27px;
+        }
+        .title{
+            margin-left: 20px;
+            color: rgb(251,79,69);
+            font-family: initial;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .div_c{
+            flex-wrap: wrap;
+            background-color: white;
+            justify-content: space-around
+        }
+        .div_c .left{
+            border-bottom:1px solid rgb(243,243,243);
+            border-right: 1px solid rgb(243,243,243);
+            width:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 75px;
+        }
+        .div_c .right{
+            border-bottom:1px solid rgb(243,243,243);
+            width:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 75px;
+        }
+        .div_c .div_box{
+            margin-left: 4px;
+            display:flex;
+            align-items:flex-start;
+            flex-direction: column;
+            min-width: 96px;
+        }
+        .div_c .title-small{
+            font-size: 12px;
+            color: rgb(149,149,149);
+        }
+        .div_c img{
+            width: 58px;
+            height: 58px;
+        }
+        .div_c_small{
+            width: 50%;
+        }
+        .scroll-div{
+            margin-left: 10px;
+        }
+        .ext-scroll-div{
+            background-color: white;
+            height: 100px;
+            overflow: hidden;
+        }
+        .span1{
+            color: rgb(250,165,72);
+        }
+        .span2{
+            color: rgb(112,193,214);
+        }
+        .span3{
+            color: rgb(161,225,138);
+        }
+        .span4{
+            color: rgb(255,159,174);
+        }
+        .notice{
+            width: 100%;
+            background-color: white;
+            border-bottom:1px solid rgb(243,243,243);
+            height: 30px;
+        }
+        .notice-div{
+            width: 47px;
+        }
+        .notice-title{
+            color: rgb(251,79,69);
+            font-family: initial;
+            font-size: 15px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .notice-content{
+            width: 89%;
+            height: 18px;
+            overflow: hidden;
+            position: relative;
+        }
+        .banner {
+            position: absolute;
+            width: 82200%;
+            /*宽度足够宽才能将两个div放在同一行滚动*/
+        }
+        #wrap1,
+        #wrap2 {
+            float: left;
+            padding-top:0px;
+            font-size: 15px;
+        }
+        .zj-mid{
+            width: 40%;
+        }
+        @media screen and ( max-width: 320px ) {
+            .zj-mid{
+                width: 37%;
+            }
+            .notice-content{
+                height: 27px;
+            }
+            #wrap1,
+            #wrap2 {
+                float: left;
+                padding-top:0px;
+                font-size: 12px;
+            }
+        }
+        @media only screen and (device-width: 414px) and (device-height: 736px){
+            .zj-mid{
+                width: 37%;
+            }
+            .notice-content{
+                height: 27px;
+            }
+            #wrap1,
+            #wrap2 {
+                float: left;
+                padding-top:0px;
+                font-size: 12px;
+            }
+        }
+        .download-div{
+            position: fixed;
+            bottom: 49px;
+            height: 3.0rem;
+            background-color: rgb(48,48,48);
+            width: 100%;
+            color: white;
+            z-index: 999999;
+        }
+        .download-div button{
+            padding: 8px;
+            border-radius: 7px;
+            border: red;
+            background-color: rgb(251,79,69);
+            color: white;
+        }
+        button:focus{
+            outline: none;
+        }
+
+        .xhb{
+            position: absolute;
+            right: 10px;
+            top: 240px;
+            z-index: 999999;
+            cursor: move;
+        }
+        .xhb img{
+            width: 80px;
+        }
+        @media screen and ( max-width: 320px ) {
+            .xhb{
+                top: 216px;
+            }
+        }
+        @media only screen and (device-width: 414px) and (device-height: 736px){
+            .xhb{
+                top: 257px;
+            }
+        }
+    </style>
+
+
+<div class="container">
+    <!--&lt;!&ndash;上方点击栏目&ndash;&gt;-->
+    <!--<header>-->
+        <!--<div class="div_flex">-->
+            <!--<span class="header_span">首页</span>-->
+        <!--</div>-->
+    <!--</header>-->
+    <section>
+        <!-- Swiper -->
+        <div class="swiper-container" id="swiper1">
+            <div class="swiper-wrapper" id="swiper-wrapper1">
+                <div class="swiper-slide"><img src="http://test.h5.com/" style="width: 100%"></div>
+                <div class="swiper-slide"><img src="http://test.h5.com/" style="width: 100%"></div>
+                <div class="swiper-slide"><img src="http://test.h5.com/" style="width: 100%"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <section>
+        <div class="notice flex-between">
+            <div style="width:60px;">
+                <span class="notice-title">公告：</span>
+            </div>
+            <!-- 要使用hidden必须使用块级元素 -->
+            <div class="notice-content">
+                <div class="banner" id="banner">
+                    <div id="wrap1">彩多宝支持支付宝、银联支付、快捷支付存款，银行转账如遇不懂操作方式请及时联系客服，更多优惠，更多彩金等您来拿！</div>
+                    <div id="wrap2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="mid_flex ext-mid-box">
+            <div class="mid_flex mid-small-box btn-deposit">
+                <img src="./首页_files/cztk.png" alt="">
+                <span class="mid-span span1">存/取款</span>
+            </div>
+            <div class="mid_flex mid-small-box btn-purchase-history">
+                <img src="./首页_files/tzjl.png" alt="">
+                <span class="mid-span span2">投注记录</span>
+            </div>
+            <div class="mid_flex mid-small-box btn-activity">
+                <img src="./首页_files/huodong.png" alt="">
+                <span class="mid-span span3">优惠活动</span>
+            </div>
+            <div class="mid_flex mid-small-box btn-chat">
+                <img src="./首页_files/zxkf.png" alt="">
+                <span class="mid-span span4">在线客服</span>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="flex-vertical box-title">
+            <span class="title">热门彩种</span>
+        </div>
+        <!--border-right: 1px solid rgb(149,149,149);-->
+        <div class="flex-vertical div_c">
+            <div class="div_c_small btn-cqssc">
+                <div class="left">
+                    <img src="./首页_files/cqssc.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">重庆时时彩</span>
+                        <span class="title-small">超百万用户玩</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div_c_small btn-2ssc">
+                <div class="right">
+                    <img src="./首页_files/efssc.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">2分时时彩</span>
+                        <span class="title-small">每两分钟一期</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div_c_small btn-bjpk10">
+                <div class="left">
+                    <img src="./首页_files/bjpk10.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">北京PK10</span>
+                        <span class="title-small">刺激简单中奖快</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div_c_small btn-2fpk10">
+                <div class="right">
+                    <img src="./首页_files/efpk10.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">2分PK10</span>
+                        <span class="title-small">每两分钟一期</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div_c_small btn-xglhc">
+                <div class="left">
+                    <img src="./首页_files/xglhc.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">香港六合彩</span>
+                        <span class="title-small">方便快捷下注快</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div_c_small btn-jslhc">
+                <div class="right">
+                    <img src="./首页_files/jslhc.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">极速六合彩</span>
+                        <span class="title-small">每五分钟一期</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div_c_small btn-hbks">
+                <div class="left">
+                    <img src="./首页_files/hbks.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">湖北快三</span>
+                        <span class="title-small">每天87期天天开</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div_c_small btn-hnks">
+                <div class="right">
+                    <img src="./首页_files/hnks.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">河南快三</span>
+                        <span class="title-small">每天84期天天开</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="div_c_small btn-gxks">
+                <div class="left">
+                    <img src="./首页_files/gxks.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">广西快三</span>
+                        <span class="title-small">每天78期天天开奖</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div_c_small btn-jsks">
+                <div class="right">
+                    <img src="./首页_files/jsks.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">江苏快三</span>
+                        <span class="title-small">玩法简单中奖快</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="div_c_small btn-bjks">-->
+                <!--<div class="left">-->
+                    <!--<img src="/statics/images/caizhong/bjks.png" alt="">-->
+                    <!--<div class="div_box">-->
+                        <!--<span class="tile-str">北京快三</span>-->
+                        <!--<span class="title-small">每天89期天天开</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="div_c_small btn-nmgks">-->
+                <!--<div class="right">-->
+                    <!--<img src="/statics/images/caizhong/nmgks.png" alt="">-->
+                    <!--<div class="div_box">-->
+                        <!--<span class="tile-str">内蒙古快三</span>-->
+                        <!--<span class="title-small">每天73期天天开</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <div class="div_c_small btn-xjssc">
+                <div class="left">
+                    <img src="./首页_files/xjssc.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">新疆时时彩</span>
+                        <span class="title-small">每天96期天天开</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div_c_small btn-lfks">
+                <div class="right">
+                    <img src="./首页_files/efks.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">两分快三</span>
+                        <span class="title-small">每两分钟一期</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="div_c_small btn-bj28">
+                <div class="left">
+                    <img src="./首页_files/bj28.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">北京28</span>
+                        <span class="title-small">PC蛋蛋最易中奖</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div_c_small btn-xy28">
+                <div class="right">
+                    <img src="./首页_files/xy28.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">幸运28</span>
+                        <span class="title-small">每两分钟一期</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="div_c_small btn-fc3d">
+                <div class="left">
+                    <img src="./首页_files/3d.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">福彩3D</span>
+                        <span class="title-small">每天一期天天开奖</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div_c_small btn-pls">
+                <div class="right">
+                    <img src="./首页_files/pls.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">排列三</span>
+                        <span class="title-small">每天一期天天开奖</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div_c_small btn-xypk">
+                <div class="left">
+                    <img src="./首页_files/xypk.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">幸运扑克</span>
+                        <span class="title-small">简单刺激开奖快</span>
+                    </div>
+                </div>
+            </div>
+            <div class="div_c_small btn-gdsyxw">
+                <div class="right">
+                    <img src="./首页_files/gdsyxw.png" alt="">
+                    <div class="div_box">
+                        <span class="tile-str">广东11选5</span>
+                        <span class="title-small">每10分钟一期</span>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="div_c_small">-->
+            <!--</div>-->
+        </div>
+    </section>
+    <section>
+        <div class="flex-vertical box-title">
+            <span class="title">最新中奖榜</span>
+        </div>
+        <div class="ext-scroll-div">
+            <!-- Swiper -->
+            <div class="swiper-container" id="swiper2">
+                <div class="swiper-wrapper" id="swiper-wrapper2">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="height: 44px">
+    </section>
+    <footer>
+        <div class="nav">
+            <ul>
+                <li>
+                    </li></ul></div></footer></div></body></html>
